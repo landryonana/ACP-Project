@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570943323317.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "34CEACE1",
+    "lastKnownWriteTime" : 1871745132280,
+    "last_content_update" : 1570943323317,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "EC4D322",
+        "caption" : "centrerReduit",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=centrerReduit&cache_key=EC4D322",
+        "displayedObservations" : 5,
+        "environment" : "",
+        "expression" : "centrerReduit",
+        "object" : "centrerReduit",
+        "preview" : 0,
+        "totalObservations" : 5,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

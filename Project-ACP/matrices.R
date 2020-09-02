@@ -1,0 +1,69 @@
+
+# matrice des Poids
+matricePoids=function(m){
+  
+  #recupération du nombre de ligne de la matrice "m"
+  poids=1/nrow(m)
+  
+  return( poids*diag(nrow(m)) )
+}
+
+# moyenne des variables
+matriceMoyenne=function(m){
+  
+  poids = round( matricePoids(m) , 3 )
+  
+  g = t(m)%*%as.matrix( diag(poids ) ) 
+  
+  return( round(g,1) )
+  
+}
+
+# matrice centré
+matriceCentrer=function(m){
+  
+  y = m - ( as.matrix( ( rep( 1,nrow(m) ) ) ) %*% t( matriceMoyenne(m) ) )
+  
+  return(round(y,1))
+}
+
+# matrice diagonale des inverses des écart-type
+matriceDiagInverseEcartType=function(m){
+  
+  #invPoidEcartyp=1/sd(m,na.rm = TRUE)
+  #p = invPoidEcartyp*diag( nrow(t(m)) )
+  
+  poids=matricePoids(m)
+  #matrice des variances
+  v = t( matriceCentrer(m) ) %*% poids %*% matriceCentrer(m)
+  
+  #matrice diagonale des inverses des écart-type
+  sqrDiag=1/sqrt( diag(v) )
+  mIeC = sqrDiag * diag( nrow(v) )
+  
+  return(round(mIeC,1))
+}
+
+# matrice centré-réduit
+matriceCentrerReduit=function(m){
+  
+  z = matriceCentrer(m)%*%matriceDiagInverseEcartType(m)
+  
+  return(round(z,1))
+}
+
+# matrice des coorélation
+matriceCoorelation=function(m){
+  
+  r = t( matriceCentrerReduit(m) ) %*% matricePoids(m) %*% matriceCentrerReduit(m)
+  
+  return(round(r,1))
+}
+
+# matrice des variance-covariances
+matriceVarianceCovariances=function(m){
+  
+  varCov = t( matriceCentrer(m) ) %*% matricePoids(m) %*% matriceCentrer(m) - round( matriceMoyenne(m)%*%t(matriceMoyenne(m) ),1)
+  
+  return(round(varCov,1))
+}

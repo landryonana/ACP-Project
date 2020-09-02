@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570936935037.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7A917FBA",
+    "lastKnownWriteTime" : 1570943546,
+    "last_content_update" : 1570943546455,
+    "path" : "C:/Users/JESUS-CHRIST/Desktop/TP-ACP/matrices.R",
+    "project_path" : "matrices.R",
+    "properties" : {
+        "cursorPosition" : "65,85",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

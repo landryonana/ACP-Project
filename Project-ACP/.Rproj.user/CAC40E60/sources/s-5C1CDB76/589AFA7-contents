@@ -1,0 +1,28 @@
+library(gWidgets)
+library(RMySQL)
+library(gWidgets)
+library(dbConnect)
+library(arules)
+library(arulesViz)
+
+  venteList=function(){
+    con=dbConnect(MySQL(),user='root',password='',dbname='app_db',host='localhost')
+  vente=dbGetQuery(con,"select * from toto_vente")
+  
+  return(vente)
+  }
+  
+  venteListCientRefArticle=function(){
+    con=dbConnect(MySQL(),user='root',password='',dbname='app_db',host='localhost')
+    vente=dbGetQuery(con,"select Num_client,Ref_article from toto_vente")
+    
+    return(vente)
+  }
+  
+  ruleVente=function(a){
+    a_df=data.frame(Type_piece=as.factor(a$Type_piece),as.factor(a$Num_piece),Quantite=as.factor(a$Quantite),Prix_unitaire=as.factor(a$Prix_unitaire))
+    trans=as(a_df,"transactions")
+    parameter = list(supp = 0.01, conf = 0.9, target ="rules")
+    rules=apriori(trans,parameter)
+    return(rules)
+    }

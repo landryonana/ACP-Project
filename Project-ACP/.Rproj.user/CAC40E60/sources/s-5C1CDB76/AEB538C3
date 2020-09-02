@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570941077559.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AEB538C3",
+    "lastKnownWriteTime" : 2459013921659036276,
+    "last_content_update" : 1570941077559,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B2E5C1ED",
+        "caption" : "centrerLandry",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=centrerLandry&cache_key=B2E5C1ED",
+        "displayedObservations" : 5,
+        "environment" : "",
+        "expression" : "centrerLandry",
+        "object" : "centrerLandry",
+        "preview" : 0,
+        "totalObservations" : 5,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
